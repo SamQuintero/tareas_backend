@@ -1,0 +1,56 @@
+# 📰 News API Backend
+
+This project is a REST API built with Node.js + Express + TypeScript that consumes data from NewsAPI.org
+It allows you to list news sources, get top headlines, and search for articles.
+
+## 🛠️ Technologies & Libraries
+
+- Backend framework: Express
+- Language: TypeScript
+- HTTP client: Axios
+- Environment variables: dotenv
+- Nodemon (dev dependency) for auto-reloading
+- ts-node-dev (dev dependency) for TypeScript runtime in development
+
+
+## 📌 Requirements
+
+Before running the project locally, make sure you have installed:
+- Node.js >= 18
+- npm >= 9
+- A valid API key from NewsAPI https://newsapi.org/
+
+### 1. Clone the repository
+git clone https://github.com/SamQuintero/tareas_backend.git
+cd tareas_backend/tarea1
+
+### 2. Install dependencies
+npm install
+
+### 3. Configure environment variables
+
+.env file example:
+API_KEY=your_api_key_here
+ 
+### 4. Run the project
+Development mode
+npm run dev
+
+Build and run in production
+npm run build
+npm start
+
+API will be available at:
+👉 http://localhost:3000
+
+## 📡 Available Endpoints
+🔹 Sources
+GET /api/sources
+
+🔹 Top Headlines
+GET /api/headlines?country=us&category=technology
+Parameters: country, category, sources, q
+
+🔹 Everything (search articles)
+GET /api/everything?q=bitcoin
+Parameters: q (required), from, to, language, sortBy
