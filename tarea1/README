@@ -45,12 +45,12 @@ API will be available at:
 
 ## 📡 Available Endpoints
 🔹 Sources
-GET /api/sources
+http://localhost:3000/api/sources?language=es
 
 🔹 Top Headlines
-GET /api/headlines?country=us&category=technology
+http://localhost:3000/api/headlines?country=us&category=technology
 Parameters: country, category, sources, q
 
 🔹 Everything (search articles)
-GET /api/everything?q=bitcoin
+http://localhost:3000/api/everything?q=bitcoin
 Parameters: q (required), from, to, language, sortBy
