@@ -9,7 +9,7 @@ const app = express();
 app.use("/api", routes);
 
 
-console.log("API KEY:", process.env.API_KEY);
+
 
 app.listen(port, () => {
     console.log(`api running on port ${port}`);
