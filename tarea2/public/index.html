@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chat App</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Chat App</h1>
+      <button id="logoutBtn">Cerrar sesión</button>
+    </header>
+
+    <main id="main">
+      <section id="nameScreen" class="screen">
+        <h2>Introduce tu nombre</h2>
+        <input id="nameInput" placeholder="Tu nombre" />
+        <button id="enterBtn">Entrar</button>
+      </section>
+
+      <section id="roomsScreen" class="screen hidden">
+        <h2>Salas disponibles</h2>
+        <ul id="roomsList"></ul>
+        <button id="backToName" class="secondary hidden">Volver</button>
+      </section>
+
+      <section id="chatScreen" class="screen hidden">
+        <h2 id="roomTitle"></h2>
+        <div id="messages"></div>
+        <form id="messageForm">
+          <input id="messageInput" autocomplete="off" placeholder="Escribe un mensaje..." />
+          <button>Enviar</button>
+        </form>
+        <button id="leaveRoomBtn" class="secondary">Salir de la sala</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/client.js"></script>
+</body>
+</html>
