@@ -1,0 +1,9 @@
+# Test with jest
+
+## Setup
+
+    npm install
+
+## Run test
+     
+    npm test
